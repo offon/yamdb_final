@@ -1,7 +1,6 @@
 import os
 from datetime import timedelta
 
-
 PROJECT_EMAIL = 'registration@yamdb.ru'
 URL_FOR_GET_TOKEN = 'http://127.0.0.1:8000/api/v1/auth/token/'
 VERSION_URL = 'v1/'

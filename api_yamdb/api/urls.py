@@ -2,8 +2,9 @@ from django.urls import include, path
 from rest_framework import routers
 
 from api_yamdb.settings import VERSION_URL
-from .views import (CategoryViewSet, CommentReviewViewSet, GenreViewSet,
-                    ReviewViewSet, TitleViewSet)
+from .views import (CategoryViewSet, CommentReviewViewSet,
+                    GenreViewSet, ReviewViewSet, TitleViewSet)
+
 
 router = routers.DefaultRouter()
 router.register('categories', CategoryViewSet, basename='categories')
