@@ -5,7 +5,6 @@ from api_yamdb.settings import VERSION_URL
 from .views import (CategoryViewSet, CommentReviewViewSet,
                     GenreViewSet, ReviewViewSet, TitleViewSet)
 
-
 router = routers.DefaultRouter()
 router.register('categories', CategoryViewSet, basename='categories')
 router.register('genres', GenreViewSet, basename='genres')
