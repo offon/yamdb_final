@@ -1,8 +1,8 @@
 from django.urls import include, path
 from rest_framework import routers
+from users.views import UserViewSet, confrim_user, request_for_registration
 
 from api_yamdb.settings import VERSION_URL
-from users.views import confrim_user, request_for_registration, UserViewSet
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet, basename='users')

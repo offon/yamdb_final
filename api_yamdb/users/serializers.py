@@ -1,7 +1,7 @@
 from rest_framework import exceptions, serializers
+from users.models import User
 
 from api_yamdb.settings import BLOCKED_NAMES
-from users.models import User
 
 
 class CreateUserSerialise(serializers.ModelSerializer):
