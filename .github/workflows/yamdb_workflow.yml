@@ -42,8 +42,8 @@ jobs:
     needs: tests
     steps:
       - name: build image
+        runs-on: ubuntu-latest
         run: |
-        cd api_yamdb
         docker build .
         docker image ls
       - name: Check out the repo
