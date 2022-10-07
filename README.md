@@ -1,5 +1,7 @@
+![example workflow](https://github.com/github/docs/actions/workflows/yamdb_workflow.yml/badge.svg)
+
 # Описание
-![Status of yandb](https://github.com/github/docs/actions/workflows/yamdb_workflow.yml/badge.svg)
+
 Программа для создания небольших постов, с возможностью объединять их в группы, оставлять коментарии и подписываться на понравившего автора.
 В данной реализации выполнена на REST_API
 
