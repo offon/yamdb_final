@@ -80,4 +80,8 @@ jobs:
           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_docker:latest
           #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 ${{ secrets.DOCKER_USERNAME }}/yamdb_docker:latest
+          sudo docker-compose up -d
+          sudo docker-compose exec web python manage.py migrate
+          sudo docker-compose exec web echo "from users.models import User; User.objects.create_superuser('admin', 'admin@yamdb.com', 'admin')" | python manage.py shell
+          # docker-compose up -d
+          # sudo docker run --rm -d -p 5000:5000 ${{ secrets.DOCKER_USERNAME }}/yamdb_docker:latest
