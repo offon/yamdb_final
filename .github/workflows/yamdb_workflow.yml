@@ -73,9 +73,9 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
-        username: ${{ secrets.SSH_USER }}
+        # username: ${{ secrets.SSH_USER }}
         # key: ${{ secrets.SSH_KEY }}
-        # script: |
+        script: |
           # Выполняет pull образа с DockerHub
           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_docker:latest
           #остановка всех контейнеров
