@@ -74,7 +74,7 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         # username: ${{ secrets.SSH_USER }}
-        # key: ${{ secrets.SSH_KEY }}
+        key: ${{ secrets.SSH_KEY }}
         script: |
           # Выполняет pull образа с DockerHub
           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_docker:latest
