@@ -1,4 +1,4 @@
-![example workflow](https://github.com/github/docs/actions/workflows/yamdb_workflow.yml/badge.svg)
+![workflow](https://github.com/offon/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 # Описание
 
