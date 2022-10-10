@@ -17,26 +17,16 @@ git clone https://github.com/yandex-praktikum/kittygram2plus.git
 ```
 cd yatube_api
 ```
-Cоздать и активировать виртуальное окружение:
+Запустите docker-compose командой:
 ```
-python3 -m venv env
+ docker-compose up.
 ```
+Выполните по очереди команды:
 ```
-source env/bin/activate
+docker-compose exec web python manage.py migrate
+docker-compose exec web python manage.py createsuperuser
+docker-compose exec web python manage.py collectstatic --no-input 
 ```
-Установить зависимости из файла requirements.txt:
-```
-pip install -r requirements.txt
-```
-Выполнить миграции:
-```
-python3 manage.py migrate
-```
-Запустить проект:
-```
-python3 manage.py runserver
-```
-
 # Примеры запросов
 
 - Получить JWT-токен

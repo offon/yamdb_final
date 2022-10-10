@@ -8,9 +8,9 @@ from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 from users.models import User
 
-from .extra_functions import send_code_by_email
 from .serializers import (CreateUserSerialise, GetTokenSerialise,
                           UsersSerializer)
+from .utils import send_code_by_email
 
 
 @api_view(['POSt', ])
